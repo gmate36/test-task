@@ -17,9 +17,6 @@ class PostAPI
 
     public function getLatestPostsContent(): void
     {
-        require_once(ABSPATH . 'wp-includes/class-wp-query.php');
-        require_once(ABSPATH . 'wp-includes/post-template.php');
-
         $postsQuery = new WP_Query([
             'post_type' => 'post',
             'order' => 'ASC',
